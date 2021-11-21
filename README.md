@@ -89,6 +89,15 @@ OpenSW_assignment1
      ```C
      sed -i 's/abc/def/' fileName
      ```
+     
+     
+* **awk**
+    * 정의:
+
+
+
+
+
 getopt 출처: <https://soooprmx.com/c-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%EB%A5%BC-%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94-getopt-%EC%82%AC%EC%9A%A9%EB%B2%95/>,<https://en.wikipedia.org/wiki/Getopt>
 
 getopts 출처: <https://en.wikipedia.org/wiki/Getopts>
