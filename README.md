@@ -92,14 +92,15 @@ OpenSW_assignment1
      
      
 * **awk**
-    * 정의:
+    * 정의: awk는 파일로부터 레코드(record)를 선택하고, 선택된 레코드에 포함된 값을 조작하거나 데이터화하는 것을 목적으로 사용하는 프로그램입니다. 즉, awk 명령의 입력으로 지정된 파일로부터 데이터를 분류한 다음, 분류된 텍스트 데이터를 바탕으로 패턴 매칭 여부를 검사하거나 데이터 조작 및 연산 등의 액션을 수행하고, 그 결과를 출력하는 기능을 수행합니다.
+    * awk 명령어로 할 수 있는 일들
+    ![99C761465D1CBF9B28](https://user-images.githubusercontent.com/94786955/142767027-c11eeed4-30c2-4168-a38e-a646822433c6.png)
 
-
-
-
-
+    
 getopt 출처: <https://soooprmx.com/c-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%EB%A5%BC-%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94-getopt-%EC%82%AC%EC%9A%A9%EB%B2%95/>,<https://en.wikipedia.org/wiki/Getopt>
 
 getopts 출처: <https://en.wikipedia.org/wiki/Getopts>
 
 sed 출처:<https://ko.wikipedia.org/wiki/Sed_(%EC%9C%A0%ED%8B%B8%EB%A6%AC%ED%8B%B0)>
+
+awk 출처:<https://recipes4dev.tistory.com/171>
