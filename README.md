@@ -40,3 +40,38 @@ OpenSW_assignment1
 27:     return 0;
 28: }
 ```
+
+* **getopts**
+  * 정의 : getopts는 명령줄 인수를 구문 분석하기 위한 내장 Unix 셸 명령입니다.
+  * getopts가 나오게 된 배경: getopt에서 **인수의 공백** 또는 **쉘 메타 문자**를 처리할 수 없었고 **오류 메시지 출력을 비활성화**하는 기능이 없었습니다.
+  * getopt와 유사한 getopts의 사용방법 ```getopt optstring [parameters] getopts optstring varname [parameters] ```
+  * 샘플 코드:
+```C
+1:#!/bin/sh
+2:while getopts ':a:l:v' opt; do
+3:    case $opt in
+4:      (v)   ((VERBOSE++));;
+5:      (a)   ARTICLE=$OPTARG;;
+6:      (l)   LANG=$OPTARG;;
+7:      (:)   # "optional arguments" (missing option-argument handling)
+8:            case $OPTARG in
+9:              (a) exit 1;; # error, according to our syntax
+10:              (l) :;;      # acceptable but does nothing
+11:            esac;;
+12:    esac
+13:done
+14:
+15:shift "$OPTIND"
+16:# remaining is "$@"
+```
+
+* **sed**
+  * 정의: sed(stream editor)는 유닉스에서 텍스트를 **분해**하거나 **변환**하기 위한 프로그램이다.
+  * 역사: 버전 7 유닉스에서 처음 등장한 sed는 데이터 파일의 명령 줄 처리를 위해 개발된 초기 유닉스 명령어들 가운데 하나입니다. 대중적인 grep 명령어의 뒤를 자연스럽게 이을 정도로 발전하였습니다.원래는 치환을 목적으로 한 grep(g/re/p)의 상이형인 "g/re/s"이었다. 개별 명령어를 위해 추가적인 특수 목적의 프로그램들이 등장할 것으로 예견하면서 맥마흔은 범용 목적의 라인 지향 스트림 편집기를 작성하였으며, 이것이 sed로 되었다.
+
+
+getopt 출처: <https://soooprmx.com/c-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%A8-%ED%8C%8C%EB%9D%BC%EB%AF%B8%ED%84%B0%EB%A5%BC-%EC%B2%98%EB%A6%AC%ED%95%98%EB%8A%94-getopt-%EC%82%AC%EC%9A%A9%EB%B2%95/>,<https://en.wikipedia.org/wiki/Getopt>
+
+getopts 출처: <https://en.wikipedia.org/wiki/Getopts>
+
+sed 출처:<https://ko.wikipedia.org/wiki/Sed_(%EC%9C%A0%ED%8B%B8%EB%A6%AC%ED%8B%B0)>
